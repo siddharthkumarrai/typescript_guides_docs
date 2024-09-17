@@ -11,15 +11,11 @@ a = "siddharth"  // ⚠ Error Type 'string' is not assignable to type 'number'.
 - configure tsconfig.js           ( tsc --init )
 - compiling typescript            ( tsc app.ts ) &nbsp ( tsc ) &nbsp ( tsc --watch )
 
- ## DATATYPE  &nbsp;  &nbsp; (<small><small><small>_The way data is stored and accessed in memory, data types are similarly divided into two categories._<small/><small/><small/>)
-
-EcmaScript [Read Docs](https://ecma-international.org/publications-and-standards/standards/ecma-262/).
-
+ ## Basics Types  
 1. Primitive  (call by value ( When called, a copy is returned.))
      - Number       --> range (2<sup>53</sup>)
      - String      --> ""
      - Boolean     --> true/false
-
 2. Non Primitive (Reference)  (call by reference ( When called, an address is returned.))
      - Array       &nbsp; &nbsp; &nbsp; 
      - Tuples      &nbsp; &nbsp; &nbsp; let arr: [number,string] = [44,"sidd"]
