@@ -20,7 +20,7 @@ a = "siddharth"  // ⚠ Error Type 'string' is not assignable to type 'number'.
      - Array       &nbsp; &nbsp; &nbsp; 
      - Tuples      &nbsp; &nbsp; &nbsp; let arr: [number,string] = [44,"sidd"]
      - Function    &nbsp; &nbsp; &nbsp; enum user{ admin = "super admin" } &nbsp;   // access user.admin &nbsp; // *key = value
-3 Type
+3. Type
 - any
   ```typescript
   let a;          // type any  * bad practice 
