@@ -28,10 +28,10 @@ a = "siddharth"  // ⚠ Error Type 'string' is not assignable to type 'number'.
   ```
 - unknown
   ```typescript
- let a: unknown;
- a = 7;
- a = "sidd";
- if(typeof a === "string")
+   let a: unknown;
+   a = 7;
+   a = "sidd";
+   if(typeof a === "string")
      a.toUpperCase();
   ```
  - void
