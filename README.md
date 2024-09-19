@@ -124,6 +124,7 @@ a = "siddharth"  // ⚠ Error Type 'string' is not assignable to type 'number'.
 1.) type abcd = number;
     type abcd = string;
  error ayegi type mein , interface mein merge kar raha tha
+ 
 2.) 
 - type ka kam hain detatype batana
 - interface ka kam hain object ka shape batana
