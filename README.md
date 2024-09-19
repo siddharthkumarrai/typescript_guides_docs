@@ -141,7 +141,168 @@ let userOne = new user("sidd","sidd@fb.com")
 console.log(userOne)   // user { name: 'sidd', email: 'sidd@fb.com', subject: 'science', age: 0 }
 ```
 > Access modifiers (public, private, protected)
-- public
+- public &nbsp;  app khai pr bhi change kro or use karo variable ko change ho jayegi
+```typescript
+   class bottleMaker{
+      constructor(public name: string){
+          this.name = name;
+      }
+      changeName(){
+          this.name = "sidd"
+      }
+   }
+   let b1 = bottleMaker("milton")
+   b1.name = "hululu"
+```
+- private &nbsp; aap bottleMaker ke ander public or private ko change kar sakte ho khai bhi
+```typescript
+   class bottleMaker{
+      constructor(public name: string){
+          this.name = name;
+      }
+      changeName(){
+          this.name = "sidd"
+      }
+   }
+   let b1 = bottleMaker("milton")
+   b1.changeName()
+   b1.name = "hululu" //
+```
+- Inheritance  (private mein jo bhi variable hain wo bas usi class mein access ho payenge
+```typescript
+class BottleMaker{
+                 
+    constructor (public name: string){}
+                // (private name: string)
+}
+
+class MetalBottleMaker extends BottleMaker{
+     constructor(name: string){
+         super(name);
+     }
+
+     getValue(){
+         console.log(this.name)
+     }
+}
+let b1 = new MatalBottleMaker("millton")
+```
+- protected (jis class mein variable use ho skta hain or jisne extend kari usmein bhi access hoga but bhar nahi hoga or change nahi karne dega
+```typescript
+class BottleMaker{   
+    protected name: "milton";
+}
+
+class MetalBottleMaker extends BottleMaker{
+     public material = "metail";
+
+     changename(){
+         this.name = "something"
+     }
+}
+let b1 = new MatalBottleMaker("millton")
+b1.name = "other name"  // error ayega
+```
+> Readonly property
+```typescript
+   class User{
+      constructor(public readonly name: string){}
+
+      changeName(){
+           this.name = "japan"
+      }
+   }
+   let u1 = new user("sidd");
+   u1.changeName()    // vhange nahi karne dega
+```
+> Optional Property
+```typescript
+   class User{
+      constructor(public name: string, public gender?: string){}
+   }
+   let u1 = new user("sidd");
+```
+> Parameter property
+```typescript
+   class User{
+      constructor(public name: string, public age: string){}  // parameter property bolte
+   }
+```
+> Getters and Setters
+```typescript
+   class User{
+      constructor(public _name: string, public _age: string){}
+
+      get name() {
+          return this._name
+      }
+
+      set name(value: string) {
+           this._name = value;
+      }
+   }
+```
+> Static &nbsp; aap bin uska new instance banye us property or method ko access kar skte ho static memeber include nahi honge new instances mein
+```typescript
+   class siddLiberary{
+       static version = 1.0;
+
+       static getrandomNumber(){
+              return Math.random();
+       }
+   }
+   let sl = new siddLiberary(); abhi koi bhi member nahi hoga ismein
+```
+> Abstract classes and methods
+- wo class jisk instance hum create na kre khali extends kare bas
+- us class ko new keyword se naya instance na bane
+## Functions
+```typescript
+   function abc(name: string, cb: (argument: string) => void){
+      cb("sidd")
+   }
+   abc("sidd",(arg: string) =>{
+      console.log(arg)
+   }
+```
+> Optional and Default Parameter
+- Optional 
+```typescript
+   function abc(name: string, gender?: string){}
+```
+- Default Parameter
+```typescript
+   function abc(name: string, gender: string = "tujhe nahi pata"){}
+```
+> Rest parameter
+```typescript
+   function friends(...args: string[]){
+        console.log(args)
+   }
+   friends("sidd","abhi","raj","sag")
+```
+> Overloads
+```typescript
+   // ts function signature
+   function abcd(a: string): void;
+   function abcd(a: string, b: number): number;
+
+   function abcd(a: any, b?: any){
+      if(typeof a === "string" && typeof b === undefined){
+          console.log("first")
+      }
+      if(typeof a === "string" && typeof b === "number"){
+          return 123;
+      }
+      else throw new Error("something went wrong")
+   }
+   abcd("sidd")
+   abcd("sidd",12)
+```
+### Generics
+
+      
+
       
     
 
