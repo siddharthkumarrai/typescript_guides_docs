@@ -128,6 +128,7 @@ a = "siddharth"  // ⚠ Error Type 'string' is not assignable to type 'number'.
 - type ka kam hain detatype batana
 - interface ka kam hain object ka shape batana
 ## Classes and OOP
+```typescript
 class user{
     age = 0;
     constructor(public name: string , public email: string, public subject = "Maths"){
@@ -137,7 +138,7 @@ class user{
 }
 let userOne = new user("sidd","sidd@fb.com") 
 console.log(userOne)   // user { name: 'sidd', email: 'sidd@fb.com', subject: 'science', age: 0 }
-
+```
 > Access modifiers (public, private, protected)
 - public
       
