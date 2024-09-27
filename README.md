@@ -300,6 +300,91 @@ b1.name = "other name"  // error ayega
    abcd("sidd",12)
 ```
 ### Generics
+> Generics Function
+```typescript
+   function log<T>(val:T){
+       console.log(val);
+   }
+   log(12)
+   log("sidd")
+```
+> Generics Interface
+```typescript
+   interface Halua<T> {
+       name: string;
+       age: number;
+       key: T;
+   }
+
+   function abcd(obj: Halua<string>){
+   }
+   abcd({name:"sidd",age:19,key: "abcddisgfu"})
+```
+> Generics Class
+```typescript
+   class BottleMaker<T> {
+       constructor(public key: T){}
+   }
+   let b1 = new BottleMaker<string>("Milton")
+   let b2 = new BottleMaker(55)
+```
+- catch
+```typescript
+   function abcd<T>(a: T, b:T): T {
+      return "sidd";      // error ❎
+      return  <T>"sidd"   // ✅
+   }
+   abcd<string>("sidd","hello")
+```
+### Exportting and Importing modules
+- basic exporting and importing
+```typescript
+   export function abcd(){}
+   export function xyz(){}
+
+   import { abcd, xyz } from "./filename"
+```
+- export default (single export)
+```typescript
+   export default class Payment{
+           constructor(public name: string) { }
+   }
+
+   import Payment from "./Payment"  // curley bracket nahi lagenge
+```
+### Type Assertion
+```typescript
+   let a: any = 12
+
+   (a as string).toUpperCase()
+   (<number>a).toExponential
+```
+### Type casting
+```typescript
+   let a = Number("55")
+```
+### Non-null assertion operator
+```typescript
+   let a: null | undefined | string
+   a = "sidd"
+
+   a! (a to sting hi hain )
+```
+### Type Guards and TypeScript utility types
+```typescript
+   function abcd (arg: string | number | any){ 
+        if (typeof arg === "number"){
+              return "number";
+        }
+        else if(typeof arg === "string") {
+              return "string"
+        }else{
+           throw new Error("pagal error")
+        }
+    }
+```
+    
+   
 
       
 
